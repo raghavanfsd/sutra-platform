@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: "20"
       - run: npm install
+      - name: Build Sutra API
+        run: npm run build --prefix apps/sutra-api
       - name: Start Sutra API
         run: npm run start --prefix apps/sutra-api &
       - name: Wait for server
