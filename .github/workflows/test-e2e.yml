@@ -15,6 +15,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: "20"
       - run: npm install
+      - name: Start Sutra API
+        run: npm run start:sutra:dev &
+      - name: Wait for server
+        run: npx wait-on http://localhost:3000
       - run: npm run test:e2e
