@@ -18,7 +18,7 @@ jobs:
           node-version: "20"
       - run: npm install
       - name: Start Sutra API
-        run: npm run start:sutra:dev &
+        run: npm run start --prefix apps/sutra-api &
       - name: Wait for server
         run: npx wait-on http://localhost:3000
       - run: npm run test:e2e
