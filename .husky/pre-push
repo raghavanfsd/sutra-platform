@@ -1,0 +1,27 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🛡️  Running pre-push checks..."
+
+npm run lint
+npm run test
+
+if [ $? -ne 0 ]; then
+  echo "❌ Push rejected: Tests or Lint failed."
+  exit 1
+fi
+
+echo "🔍 Checking .ts files have matching .feature files..."
+missing=$(git diff --cached --name-only --diff-filter=ACM | grep '\.ts$' | while read -r tsfile; do
+  featurefile=$(echo "$tsfile" | sed 's/\.ts$/.feature/')
+  if [ ! -f "$featurefile" ]; then
+    echo "❌ Missing feature file: $featurefile"
+  fi
+done)
+
+if [ -n "$missing" ]; then
+  echo "$missing"
+  echo "⛔ Pre-push check failed: Some .ts files don't have matching .feature files."
+  exit 1
+fi
+

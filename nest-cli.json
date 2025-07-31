@@ -1,0 +1,95 @@
+{
+  "collection": "@nestjs/schematics",
+  "projects": {
+    "core": {
+      "type": "library",
+      "root": "libs/core",
+      "entryFile": "index",
+      "sourceRoot": "libs/core/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/core/tsconfig.lib.json"
+      }
+    },
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    },
+    "theme": {
+      "type": "library",
+      "root": "libs/theme",
+      "entryFile": "index",
+      "sourceRoot": "libs/theme/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/theme/tsconfig.lib.json"
+      }
+    },
+    "payments": {
+      "type": "library",
+      "root": "libs/payments",
+      "entryFile": "index",
+      "sourceRoot": "libs/payments/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/payments/tsconfig.lib.json"
+      }
+    },
+    "notifications": {
+      "type": "library",
+      "root": "libs/notifications",
+      "entryFile": "index",
+      "sourceRoot": "libs/notifications/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/notifications/tsconfig.lib.json"
+      }
+    },
+    "chat": {
+      "type": "library",
+      "root": "libs/chat",
+      "entryFile": "index",
+      "sourceRoot": "libs/chat/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/chat/tsconfig.lib.json"
+      }
+    },
+    "athithya": {
+      "type": "library",
+      "root": "libs/athithya",
+      "entryFile": "index",
+      "sourceRoot": "libs/athithya/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/athithya/tsconfig.lib.json"
+      }
+    },
+    "sangha": {
+      "type": "library",
+      "root": "libs/sangha",
+      "entryFile": "index",
+      "sourceRoot": "libs/sangha/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/sangha/tsconfig.lib.json"
+      }
+    },
+    "vartaka": {
+      "type": "library",
+      "root": "libs/vartaka",
+      "entryFile": "index",
+      "sourceRoot": "libs/vartaka/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/vartaka/tsconfig.lib.json"
+      }
+    },
+    "sutra-api": {
+      "type": "application",
+      "root": "apps/sutra-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/sutra-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/sutra-api/tsconfig.json"
+      }
+    }
+  }
+}

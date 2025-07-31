@@ -1,0 +1,32 @@
+{
+  "name": "sutra-platform",
+  "scripts": {
+    "nest": "nest",
+    "prepare": "husky install",
+    "test:e2e": "cucumber-js -c tests/cucumber.js",
+    "start:sutra": "npm run start --prefix apps/sutra-api",
+    "start:sutra:dev": "npm run start:dev --prefix apps/sutra-api"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "@nestjs/cli": "^10.3.2",
+    "@types/chai": "^5.2.2",
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^6.0.3",
+    "husky": "^8.0.0",
+    "supertest": "^7.1.4",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.5",
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/core": "^11.1.5",
+    "@nestjs/platform-express": "^11.1.5",
+    "chai": "^5.2.1",
+    "ioredis": "^5.6.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  }
+}
