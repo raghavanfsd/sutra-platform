@@ -3,6 +3,8 @@
   "scripts": {
     "nest": "nest",
     "prepare": "husky install",
+    "build:sutra": "npx tsc -b apps/sutra-api/tsconfig.build.json --force",
+    "clean:sutra": "rm -rf apps/sutra-api/dist apps/sutra-api/tsconfig*.tsbuildinfo apps/sutra-api/src/*.js apps/sutra-api/src/*.d.ts",
     "test:e2e": "cucumber-js -c tests/cucumber.js",
     "start:sutra": "npm run start --prefix apps/sutra-api",
     "start:sutra:dev": "npm run start:dev --prefix apps/sutra-api"
@@ -24,6 +26,7 @@
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.1.5",
     "@nestjs/platform-express": "^11.1.5",
+    "@nestjs/testing": "^11.1.5",
     "chai": "^5.2.1",
     "ioredis": "^5.6.1",
     "reflect-metadata": "^0.2.2",
